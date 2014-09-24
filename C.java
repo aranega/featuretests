@@ -1,6 +1,7 @@
 
 import java.util.*;
 import first.second.*;
+import first.*;
 
 public class C extends A {
     /**
