@@ -15,4 +15,6 @@ public class C extends A {
      */
     private B associatedB;
     protected List<A> childs;
+    
+    protected List<List<B>> lists;
 }
