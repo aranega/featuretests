@@ -1,0 +1,21 @@
+{
+    "name": "model",
+    "license": "MIT",
+    "dependencies": {
+        "ng-crud": "^0.2.0",
+        "csw-ng-auth": "^0.1.0",
+        "angular-ui-router": "~0.2.15"
+    },
+    "overrides": {
+        "bootstrap": {
+            "main": [
+                "less/bootstrap.less",
+                "dist/css/bootstrap.css",
+                "dist/js/bootstrap.js"
+            ]
+        }
+    },
+    "resolutions": {
+        "angular": "^1.4.5"
+    }
+}

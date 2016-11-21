@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!--
+The MIT License (MIT)
+
+Copyright (c) 2015 Los Andes University
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+-->
+<html ng-app="mainApp">
+    <head>
+        <title>model</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- build:css(<%= meta.src %>) styles/vendor.css -->
+        <!-- bower:css -->
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:css(<%= meta.src %>) styles/main.css -->
+        <!-- include: "type": "css", "files": "<%= meta.includeCssFiles %>" -->
+        <!-- /include -->
+        <!-- endbuild -->
+
+        <!-- build:js(<%= meta.src %>) scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+        <script src="bower_components/angular-mocks/angular-mocks.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="bower_components/lodash/lodash.js"></script>
+        <script src="bower_components/restangular/dist/restangular.js"></script>
+        <script src="bower_components/ng-crud/dist/ngcrud.js"></script>
+        <script src="bower_components/angular-messages/angular-messages.js"></script>
+        <script src="bower_components/ngstorage/ngStorage.js"></script>
+        <script src="bower_components/checklist-model/checklist-model.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+        <script src="bower_components/csw-ng-auth/dist/csw-ng-auth.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:js(<%= meta.src %>) scripts/scripts.js -->
+        <!-- include: "type": "js", "files": "<%= meta.includeJsFiles %>" -->
+        <script src="src/app.js"></script>
+        <script src="src/modules/circle/circle.mod.js"></script>
+        <script src="src/modules/shape/shape.mod.js"></script>
+        <script src="src/modules/square/square.mod.js"></script>
+        <script src="src/modules/a/a.mod.js"></script>
+        <script src="src/modules/circle/circle.ctrl.js"></script>
+        <script src="src/modules/circle/instance/delete/circle.delete.ctrl.js"></script>
+        <script src="src/modules/circle/instance/detail/circle.detail.ctrl.js"></script>
+        <script src="src/modules/circle/instance/edit/circle.edit.ctrl.js"></script>
+        <script src="src/modules/circle/list/circle.list.ctrl.js"></script>
+        <script src="src/modules/circle/new/circle.new.ctrl.js"></script>
+        <script src="src/modules/shape/shape.ctrl.js"></script>
+        <script src="src/modules/shape/instance/delete/shape.delete.ctrl.js"></script>
+        <script src="src/modules/shape/instance/detail/shape.detail.ctrl.js"></script>
+        <script src="src/modules/shape/instance/edit/shape.edit.ctrl.js"></script>
+        <script src="src/modules/shape/list/shape.list.ctrl.js"></script>
+        <script src="src/modules/shape/new/shape.new.ctrl.js"></script>
+        <script src="src/modules/square/square.ctrl.js"></script>
+        <script src="src/modules/square/instance/delete/square.delete.ctrl.js"></script>
+        <script src="src/modules/square/instance/detail/square.detail.ctrl.js"></script>
+        <script src="src/modules/square/instance/edit/square.edit.ctrl.js"></script>
+        <script src="src/modules/square/list/square.list.ctrl.js"></script>
+        <script src="src/modules/square/new/square.new.ctrl.js"></script>
+        <script src="src/modules/a/a.ctrl.js"></script>
+        <script src="src/modules/a/instance/delete/a.delete.ctrl.js"></script>
+        <script src="src/modules/a/instance/detail/a.detail.ctrl.js"></script>
+        <script src="src/modules/a/instance/edit/a.edit.ctrl.js"></script>
+        <script src="src/modules/a/list/a.list.ctrl.js"></script>
+        <script src="src/modules/a/new/a.new.ctrl.js"></script>
+        <!-- /include -->
+        <!-- endbuild -->
+
+    </head>
+    <body style="padding-top: 60px;">
+        <div class="container">
+            <div class="col-md-12">
+                <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+                    <div class="container-fluid">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-bar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href>model</a>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="main-bar">
+                            <ul class="nav navbar-nav">
+                                <li><a ui-sref="circleList">Circle</a></li>
+                                <li><a ui-sref="shapeList">Shape</a></li>
+                                <li><a ui-sref="squareList">Square</a></li>
+                                <li><a ui-sref="aList">A</a></li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                <login-button></login-button>
+                            </ul>
+                        </div> <!-- /.navbar-collapse -->
+                    </div> <!-- /.container-fluid -->
+                </nav>
+            </div>
+            <div ui-view="mainView"></div>
+        </div>
+    </body>
+</html>
