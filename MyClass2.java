@@ -8,6 +8,6 @@ public class MyClass2 {
      */
     void test()
     {
-        System.out.println("forgot");
+        // stuffs
     }
 }
