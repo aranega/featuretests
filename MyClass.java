@@ -4,10 +4,10 @@
  */
 public class MyClass {
     /**
-     * @generated
+     * @generated NOT
      */
     void test()
     {
-        // stuffs
+        System.out.println("Hey dude");
     }
 }
